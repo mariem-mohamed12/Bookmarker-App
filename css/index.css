@@ -1,0 +1,67 @@
+body {
+  background-color: #f7ecde;
+}
+h1 {
+  font-size: 3.125rem;
+  font-family: "Pacifico", cursive;
+  font-weight: 500;
+  color: rgb(53, 46, 40);
+}
+h1::before {
+  content: " ";
+  width: 100%;
+  height: 25%;
+  background-color: #fec260;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  z-index: -1;
+  transition: all 1s;
+}
+h1:hover::before {
+  height: 50%;
+}
+header {
+  margin: 0 70px;
+  padding-bottom: 45px;
+}
+main .submit-button {
+  padding-bottom: 25px;
+}
+main .submit-button,
+header {
+  border-bottom: 2px dotted black;
+}
+
+main h2,
+.gradient-text {
+  font-family: "Righteous", sans-serif;
+  font-weight: 500;
+  background-image: linear-gradient(to right, #3fa55c, #b2ab49);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+main label,
+main .submit-button button,
+th {
+  font-family: "PT Sans Caption", sans-serif;
+}
+main .form-control:focus {
+  border-color: #d99c39;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+main .submit-button button.btn-danger {
+  background-color: #bb4120;
+}
+.swal-small {
+  font-size: 14px;
+}
+
+@media (max-width: 878px) {
+  .search {
+    width: 95% !important;
+  }
+}

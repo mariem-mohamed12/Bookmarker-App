@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+
+    <header class="mt-5 mb-4">
+        <div class="container d-flex justify-content-center">
+            <h1 class="py-2 position-relative">Bookmarker</h1>
+        </div>
+    </header>
+    <main>
+        <div class="section-one">
+            <h2 class="text-center fs-4">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="container">
+                <div class="mb-4">
+                    <label for="name" class="form-label fw-bold">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                        site Name
+                    </label>
+                    <input type="text" class="form-control" id="siteName" oninput="validation(this)"
+                        placeholder="Bookmark Name">
+                </div>
+                <div class="mb-4">
+                    <label for="siteUrl" class="form-label fw-bold">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        site URL
+                    </label>
+                    <input type="text" class="form-control" id="siteUrl" oninput="validation(this)"
+                        placeholder="Website Url">
+                </div>
+                <div class="text-center submit-button">
+                    <button class="btn btn-danger px-5 text-white" id="add" onclick="addItem()">Submit</button>
+                    <button class="btn btn-warning d-none px-5 text-white" id="update"
+                        onclick="updateItem()">Update</button>
+                </div>
+
+
+                <div class="mb-4 w-75 m-auto search">
+                    <label for="search" class="form-label fw-bold"></label>
+                    <input type="search" oninput=" searchWithName() " class="form-control" id="search"
+                        placeholder="Search With Name">
+                </div>
+            </div>
+        </div>
+        <div class="section-two">
+            <div class="container">
+                <table class="table mt-3 text-center">
+                    <thead>
+                        <tr>
+                            <th>index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Delete</th>
+                            <th>Update</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
